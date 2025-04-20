@@ -16,7 +16,7 @@ const Footer = () => {
                     </div>    
                 </aside>    
                 
-                <nav className="grid grid-flow-col gap-10">
+                <nav className="grid grid-flow-col gap-10 text-lg">
                         <a>Home</a>
                         <a>My-Bookings</a>
                         <a>Blogs</a>
