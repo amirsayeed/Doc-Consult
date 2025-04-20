@@ -1,11 +1,14 @@
 import React from 'react';
-import Navbar from '../../Components/Navbar/Navbar';
 import Banner from '../../Components/Banner/Banner';
+import Doctors from '../Doctors/Doctors';
+import { useLoaderData } from 'react-router';
 
 const Home = () => {
+    const doctorsData = useLoaderData();
     return (
         <div>
             <Banner/>
+            <Doctors doctorsData={doctorsData}/>
         </div>
     );
 };

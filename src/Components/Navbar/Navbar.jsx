@@ -1,6 +1,13 @@
 import React from 'react';
 import logoImg from "../../assets/logo.png"
+import { NavLink } from 'react-router';
 const Navbar = () => {
+     const links = <>
+                    <li><NavLink to='/'>Home</NavLink></li>
+                    <li><NavLink to=''>My-Bookings</NavLink></li>
+                    <li><NavLink to=''>Blogs</NavLink></li>
+                    <li><NavLink to=''>Contact Us</NavLink></li>
+                  </>
     return (
         <div className="navbar max-w-7xl mx-auto">
             <div className="navbar-start">
@@ -11,10 +18,7 @@ const Navbar = () => {
                 <ul
                     tabIndex={0}
                     className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                    <li><a>Home</a></li>
-                    <li><a>My-Bookings</a></li>
-                    <li><a>Blogs</a></li>
-                    <li><a>Contact Us</a></li>
+                    {links}
                 </ul>
                 </div>
                 <div className='flex gap-1 items-start'>
@@ -24,10 +28,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 text-lg">
-                    <li><a>Home</a></li>
-                    <li><a>My-Bookings</a></li>
-                    <li><a>Blogs</a></li>
-                    <li><a>Contact Us</a></li>
+                    {links}
                 </ul>
             </div>
             <div className="navbar-end">
