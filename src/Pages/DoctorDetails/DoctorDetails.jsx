@@ -19,7 +19,7 @@ const DoctorDetails = () => {
                 </div>
             </div>
             <DoctorInfo docInfo={docInfo}/>
-            <BookAppointment/>
+            <BookAppointment docInfo={docInfo}/>
         </div>
     );
 };

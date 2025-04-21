@@ -11,7 +11,7 @@ export const getStoredAppointment = () => {
 export const addAppointmentToStore = (id) => {
     const storedAppointment = getStoredAppointment();
     if (storedAppointment.includes(id)) {
-        alert('id', 'is already booked');
+        alert(id + ' is already booked');
     } else {
         storedAppointment.push(id);
         const storedAppointmentStr = JSON.stringify(storedAppointment);
