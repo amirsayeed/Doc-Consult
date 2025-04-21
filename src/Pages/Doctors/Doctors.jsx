@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Doctor from '../Doctor/Doctor';
 
 const Doctors = ({doctorsData}) => {
+    const [viewAll,setViewAll] = useState(false);
+    const [showDoctors, setShowDoctors] = useState([]);
+
+    useEffect(()=>{
+        if(viewAll){
+            setShowDoctors(doctorsData);
+        }else{
+            setShowDoctors(doctorsData.slice(0,6));
+        }
+    },[doctorsData,viewAll])
+
     return (
         <div className='my-20'>
             <div className='max-w-4xl mx-auto text-center space-y-3'>
@@ -10,8 +21,11 @@ const Doctors = ({doctorsData}) => {
             </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10'>
                 {
-                    doctorsData.map(doctor => <Doctor key={doctor.id} doctor={doctor}/>)
+                    showDoctors.map(doctor => <Doctor key={doctor.id} doctor={doctor}/>)
                 }
+            </div>
+            <div className='text-center'>
+                <button onClick={()=>setViewAll(prv=>!prv)} className='btn btn-primary rounded-3xl mt-10'>{viewAll ? 'View Less':'View All Doctors' }</button>
             </div>
         </div>
     );

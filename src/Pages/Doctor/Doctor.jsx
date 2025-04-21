@@ -1,21 +1,25 @@
 import React from 'react';
-
+import { BiRegistered } from "react-icons/bi";
 const Doctor = ({doctor}) => {
     const {image,name,education,speciality,experience,registration_number} = doctor;
     return (
         <div className="card bg-base-100 w-96 shadow-md rounded-2xl">
         <figure>
-            <img className='p-4'
-            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            <img className='p-4 rounded-3xl'
+            src={image}
             alt="Shoes" />
         </figure>
         <div className="card-body space-y-2">
             <div className='flex gap-4'>
-                <div className='badge bg-gray-300 p-3'>Available</div>
-                <div className='badge bg-gray-300 p-3'>{experience} Experience</div>
+                <div className='badge bg-[#09982F1A] text-[#09982F] p-3 rounded-2xl'>Available</div>
+                <div className='badge bg-[#176AE51A] text-[#176AE5] p-3 rounded-2xl'>{experience} Experience</div>
             </div>
-            <h2 className="text-2xl">{name}</h2>
-            <p className='font-medium'>{education}</p>
+            <h2 className="text-2xl font-bold">{name}</h2>
+            <p className='font-medium text-lg'>{education}</p>
+            <div className='flex gap-2 items-center'>
+                <BiRegistered size={25}/>
+                <p className='font-medium'>Reg No: {registration_number}</p>
+            </div>
             <div className="card-actions justify-end">
             <button className="btn btn-primary w-full rounded-3xl">View Details</button>
             </div>
