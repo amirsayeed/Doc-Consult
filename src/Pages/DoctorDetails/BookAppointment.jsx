@@ -2,9 +2,8 @@ import React from 'react';
 import { addAppointmentToStore } from '../../Utility/addtoStoredb';
 
 const BookAppointment = ({docInfo}) => {
-
-    const handleBook = (id) =>{
-        addAppointmentToStore(id);
+    const handleBook = (id,name) =>{
+        addAppointmentToStore(id,name);
     }
 
     return (
@@ -21,11 +20,8 @@ const BookAppointment = ({docInfo}) => {
             <div className='bg-[#FFA0001A] p-2 rounded-2xl max-w-5xl my-3'>
                 <p className='text-[#FFA000]'>Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
             </div>
-
-            <button onClick={()=>handleBook(docInfo.id)} className='btn bg-[#176AE5] text-[#fff] text-lg font-medium w-full rounded-3xl mt-4'>Book Appointment Now</button>
+            <button onClick={()=>handleBook(docInfo.id, docInfo.name)} className='btn bg-[#176AE5] text-[#fff] text-lg font-medium w-full rounded-3xl mt-4'>Book Appointment Now</button>
                 
-            
-            
         </div>
     );
 };

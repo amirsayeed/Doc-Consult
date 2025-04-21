@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import DoctorInfo from './DoctorInfo';
 import BookAppointment from './BookAppointment';
+import { ToastContainer} from 'react-toastify';
 const DoctorDetails = () => {
     const allDoctors = useLoaderData();
     // console.log(allDoctors);
@@ -18,6 +19,7 @@ const DoctorDetails = () => {
                     <p>Lorem ipsum dolor sit amet consectetur. Sit enim blandit orci tortor amet ut. Suscipit sed est fermentum magna. Quis vitae tempus facilisis turpis imperdiet mattis donec dignissim volutpat.</p>
                 </div>
             </div>
+            <ToastContainer />
             <DoctorInfo docInfo={docInfo}/>
             <BookAppointment docInfo={docInfo}/>
         </div>

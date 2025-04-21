@@ -1,3 +1,7 @@
+import {
+    toast
+} from 'react-toastify';
+
 export const getStoredAppointment = () => {
     const storedAppointmentStr = localStorage.getItem('booking-list');
     if (storedAppointmentStr) {
@@ -8,13 +12,15 @@ export const getStoredAppointment = () => {
     }
 }
 
-export const addAppointmentToStore = (id) => {
+export const addAppointmentToStore = (id, name) => {
     const storedAppointment = getStoredAppointment();
     if (storedAppointment.includes(id)) {
-        alert(id + ' is already booked');
+        toast.error('Appointment is already booked!');
+        return;
     } else {
         storedAppointment.push(id);
         const storedAppointmentStr = JSON.stringify(storedAppointment);
         localStorage.setItem('booking-list', storedAppointmentStr);
+        toast.success(`Your appointment with ${name} is booked!`);
     }
 }

@@ -9,7 +9,7 @@
     "experience": "10 years",
     "registration_number": "BD12451254",
     "availability": ["Monday", "Wednesday", "Friday"],
-    "consultation_fee": "500",
+    "consultation_fee": 500,
     "working_place": "Green Life Hospital, Dhaka"
   },
   {
@@ -22,7 +22,7 @@
     "experience": "15 years",
     "registration_number": "BD23114567",
     "availability": ["Sunday", "Tuesday", "Thursday"],
-    "consultation_fee": "800",
+    "consultation_fee": 800,
     "working_place": "Apollo Hospitals, Dhaka"
   },
   {
@@ -35,7 +35,7 @@
     "experience": "12 years",
     "registration_number": "BD11234789",
     "availability": ["Monday", "Tuesday", "Thursday"],
-    "consultation_fee": "600",
+    "consultation_fee": 600,
     "working_place": "Popular Diagnostic Center, Rajshahi"
   },
   {
@@ -48,7 +48,7 @@
     "experience": "8 years",
     "registration_number": "BD98764321",
     "availability": ["Tuesday", "Thursday", "Saturday"],
-    "consultation_fee": "700",
+    "consultation_fee": 700,
     "working_place": "Square Hospital, Dhaka"
   },
   {
@@ -61,7 +61,7 @@
     "experience": "9 years",
     "registration_number": "BD34561278",
     "availability": ["Wednesday", "Friday", "Saturday"],
-    "consultation_fee": "650",
+    "consultation_fee": 650,
     "working_place": "Labaid Hospital, Dhaka"
   },
   {
@@ -74,7 +74,7 @@
     "experience": "14 years",
     "registration_number": "BD88990012",
     "availability": ["Monday", "Thursday"],
-    "consultation_fee": "1000",
+    "consultation_fee": 1000,
     "working_place": "BSMMU, Dhaka"
   },
   {
@@ -87,7 +87,7 @@
     "experience": "11 years",
     "registration_number": "BD55667432",
     "availability": ["Sunday", "Tuesday", "Friday"],
-    "consultation_fee": "500",
+    "consultation_fee": 500,
     "working_place": "United Hospital, Dhaka"
   },
   {
@@ -100,7 +100,7 @@
     "experience": "13 years",
     "registration_number": "BD77889900",
     "availability": ["Monday", "Wednesday", "Saturday"],
-    "consultation_fee": "600",
+    "consultation_fee": 600,
     "working_place": "Ibn Sina Hospital, Sylhet"
   },
   {
@@ -113,7 +113,7 @@
     "experience": "7 years",
     "registration_number": "BD55667221",
     "availability": ["Tuesday", "Friday"],
-    "consultation_fee": "750",
+    "consultation_fee": 750,
     "working_place": "National Institute of Mental Health, Dhaka"
   },
   {
@@ -126,7 +126,7 @@
     "experience": "10 years",
     "registration_number": "BD88990098",
     "availability": ["Sunday", "Thursday", "Saturday"],
-    "consultation_fee": "900",
+    "consultation_fee": 900,
     "working_place": "Central Hospital, Dhaka"
   },
   {
@@ -139,7 +139,7 @@
     "experience": "6 years",
     "registration_number": "BD99001123",
     "availability": ["Monday", "Wednesday", "Friday"],
-    "consultation_fee": "700",
+    "consultation_fee": 700,
     "working_place": "Medinova Medical Services, Chattogram"
   },
   {
@@ -152,7 +152,7 @@
     "experience": "16 years",
     "registration_number": "BD22112222",
     "availability": ["Tuesday", "Thursday"],
-    "consultation_fee": "1200",
+    "consultation_fee": 1200,
     "working_place": "Dhaka Medical College Hospital, Dhaka"
   }
 ]

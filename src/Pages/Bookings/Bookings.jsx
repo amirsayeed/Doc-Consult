@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { getStoredAppointment } from '../../Utility/addtoStoredb';
 import ShowBooking from './ShowBooking';
+import Chart from '../Chart/Chart';
+import ErrorPage from '../ErrorPage/ErrorPage';
 
 const Bookings = () => {
     const [booked, setBooked] = useState([]);
@@ -17,6 +19,9 @@ const Bookings = () => {
 
     return (
         <div>
+            {booked.length===0 ? <ErrorPage/>: (<div className='bg-base-100 rounded-2xl p-6'>
+                <Chart booked={booked}/>
+            </div>)}
             <div className='my-20 text-center space-y-3'>
                 <h2 className="text-3xl font-bold">My Today Appointments</h2>
                 <p className='text-[#0F0F0F]'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
