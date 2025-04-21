@@ -18,7 +18,7 @@ const Doctor = ({doctor}) => {
             <h2 className="text-2xl font-bold">{name}</h2>
             <p className='font-medium text-lg'>{education}</p>
             <div className='flex gap-2 items-center'>
-                <BiRegistered size={25}/>
+                <BiRegistered size={20}/>
                 <p className='font-medium'>Reg No: {registration_number}</p>
             </div>
             <div className='mt-3'>
