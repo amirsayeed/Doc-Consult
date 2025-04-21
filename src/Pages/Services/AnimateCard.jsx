@@ -13,7 +13,12 @@ const AnimateCard = () => {
                     <img src={scDoctor} alt=''/>
                 </figure>
                 <div>
-                    <span className='text-5xl font-bold'><CountUp delay={0} start={0} end={199} enableScrollSpy duration={3} />+</span>
+                    <span className='text-5xl font-bold'>
+                    <CountUp delay={0} start={0} end={199} enableScrollSpy duration={3}>
+                        {({ countUpRef }) => <span ref={countUpRef} />}
+                    </CountUp>
+                    +</span>
+
                     <p className='text-xl'>Total Doctors</p>
                 </div>
             </div>
@@ -22,7 +27,10 @@ const AnimateCard = () => {
                     <img src={scReview} alt=''/>
                 </figure>
                 <div>
-                    <span className='text-5xl font-bold'><CountUp delay={0} start={0} end={467} enableScrollSpy duration={3} />+</span>
+                    <span className='text-5xl font-bold'>
+                        <CountUp delay={0} start={0} end={467} enableScrollSpy duration={3}>
+                            {({ countUpRef }) => <span ref={countUpRef} />}
+                        </CountUp>+</span>
                     <p className='text-xl'>Total Reviews</p>
                 </div>
             </div>
@@ -31,7 +39,10 @@ const AnimateCard = () => {
                     <img src={scPatient} alt=''/>
                 </figure>
                 <div>
-                    <span className='text-5xl font-bold'><CountUp delay={0} start={0} end={1900} enableScrollSpy duration={3} />+</span>
+                    <span className='text-5xl font-bold'>
+                        <CountUp delay={0} start={0} end={1900} enableScrollSpy duration={3}>
+                            {({ countUpRef }) => <span ref={countUpRef} />}
+                        </CountUp>+</span>
                     <p className='text-xl'>Patients</p>
                 </div>
             </div>
@@ -40,7 +51,10 @@ const AnimateCard = () => {
                     <img src={scStaff} alt=''/>
                 </figure>
                 <div>
-                    <span className='text-5xl font-bold'><CountUp delay={0} start={0} end={300} enableScrollSpy duration={3} />+</span>
+                    <span className='text-5xl font-bold'>
+                        <CountUp delay={0} start={0} end={300} enableScrollSpy duration={3}>
+                            {({ countUpRef }) => <span ref={countUpRef} />}
+                        </CountUp>+</span>
                     <p className='text-xl'>Total Staffs</p>
                 </div>
             </div>
