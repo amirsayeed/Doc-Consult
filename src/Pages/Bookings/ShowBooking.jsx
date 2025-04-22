@@ -5,8 +5,8 @@ const ShowBooking = ({appointment,handleCancel}) => {
     
     return (
         <div className='w-full bg-base-100 p-8 rounded-2xl'>
-        <div className='flex justify-between items-center'>
-                <div className='flex flex-col items-start gap-2'>
+        <div className='flex flex-col md:flex-row justify-between items-center'>
+                <div className='flex flex-col items-center md:items-start gap-2'>
                     <p className='font-bold text-xl'>{name}</p>
                     <p className='font-medium text-lg text-[#0F0F0F99]'>
                         <span>{education} -</span>
@@ -18,7 +18,7 @@ const ShowBooking = ({appointment,handleCancel}) => {
                     <p className='font-medium text-[#0F0F0F99] text-lg'>Appointment Fee: {consultation_fee} Taka + Vat</p>
                 </div>
             </div>
-            <button onClick={()=>handleCancel(id)} className='btn rounded-3xl w-full mt-5 text-lg text-[#FF0000] border-[#FF0000]'>Cancel Appointment</button>
+            <button onClick={()=>handleCancel(id)} className='btn rounded-3xl w-full mt-5 text-lg text-[#FF0000] border-[#FF0000] hover:bg-[#FF0000] hover:text-white'>Cancel Appointment</button>
         </div>
     );
 };

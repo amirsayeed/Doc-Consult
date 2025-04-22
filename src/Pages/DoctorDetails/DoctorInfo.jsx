@@ -4,7 +4,7 @@ const DoctorInfo = ({docInfo}) => {
     const {image,name,education,designation,working_place,consultation_fee,availability,registration_number} = docInfo || {}; 
 
     return (
-        <div className='flex gap-6 my-8 bg-base-100 p-12 rounded-2xl'>
+        <div className='flex flex-col md:flex-row gap-6 my-8 bg-base-100 p-12 rounded-2xl'>
             <div>
                 <img className='rounded-3xl' src={image} alt=''/>
             </div>
@@ -23,7 +23,7 @@ const DoctorInfo = ({docInfo}) => {
                 <div className='border-t border-dashed my-2'></div>
                     <div className='flex gap-3 items-center'>
                         <p className='font-semibold'>Availability</p>
-                        <div className='flex gap-3'>
+                        <div className='flex flex-wrap gap-3'>
                             {
                                 availability.map((day,idx)=><div key={idx} className='bg-[#FFA0001A] p-2 rounded-2xl'>
                                     <p className='text-[#FFA000]'>{day}</p>

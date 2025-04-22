@@ -5,9 +5,9 @@ const Doctor = ({doctor}) => {
     const {id,image,name,education,speciality,experience,registration_number} = doctor;
 
     return (
-        <div className="card bg-base-100 w-96 shadow-md rounded-2xl">
+        <div className="card bg-base-100 shadow-md rounded-2xl">
         <figure>
-            <img className='p-4 rounded-3xl'
+            <img className='w-3/4 md:w-full p-4 rounded-3xl'
             src={image}
             alt="Shoes" />
         </figure>

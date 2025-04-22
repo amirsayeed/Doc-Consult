@@ -26,7 +26,7 @@ const BookAppointment = ({docInfo}) => {
                 </div>
             </div>
             <div className='border-t border-dashed my-2'></div>
-            <div className='flex gap-1 items-center bg-[#FFA0001A] p-2 rounded-2xl max-w-5xl my-3'>
+            <div className='flex gap-1 items-start md:items-center bg-[#FFA0001A] p-2 rounded-2xl max-w-5xl my-3'>
                 <span className='text-[#FFA000]'><TbAlertSquareRounded size={20}/></span>
                 <p className='text-[#FFA000]'>Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
             </div>

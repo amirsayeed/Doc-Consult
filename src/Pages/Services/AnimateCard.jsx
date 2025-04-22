@@ -7,13 +7,13 @@ import CountUp from 'react-countup';
 const AnimateCard = () => {
 
     return (
-        <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center justify-center gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center justify-center gap-4 pl-3 lg:pl-0'>
             <div className='card bg-base-100 w-60 py-4 pl-8 rounded-2xl flex flex-col items-start gap-4'>
                 <figure>
                     <img src={scDoctor} alt=''/>
                 </figure>
                 <div>
-                    <span className='text-5xl font-bold'>
+                    <span className='text-3xl md:text-5xl font-bold'>
                     <CountUp delay={0} start={0} end={199} enableScrollSpy duration={3}>
                         {({ countUpRef }) => <span ref={countUpRef} />}
                     </CountUp>
@@ -27,7 +27,7 @@ const AnimateCard = () => {
                     <img src={scReview} alt=''/>
                 </figure>
                 <div>
-                    <span className='text-5xl font-bold'>
+                    <span className='text-3xl md:text-5xl font-bold'>
                         <CountUp delay={0} start={0} end={467} enableScrollSpy duration={3}>
                             {({ countUpRef }) => <span ref={countUpRef} />}
                         </CountUp>+</span>
@@ -39,7 +39,7 @@ const AnimateCard = () => {
                     <img src={scPatient} alt=''/>
                 </figure>
                 <div>
-                    <span className='text-5xl font-bold'>
+                    <span className='text-3xl md:text-5xl font-bold'>
                         <CountUp delay={0} start={0} end={1900} enableScrollSpy duration={3}>
                             {({ countUpRef }) => <span ref={countUpRef} />}
                         </CountUp>+</span>
@@ -51,7 +51,7 @@ const AnimateCard = () => {
                     <img src={scStaff} alt=''/>
                 </figure>
                 <div>
-                    <span className='text-5xl font-bold'>
+                    <span className='text-3xl md:text-5xl font-bold'>
                         <CountUp delay={0} start={0} end={300} enableScrollSpy duration={3}>
                             {({ countUpRef }) => <span ref={countUpRef} />}
                         </CountUp>+</span>

@@ -10,7 +10,7 @@ const Navbar = () => {
                     <li><NavLink to='/contact'>Contact Us</NavLink></li>
                   </>
     return (
-        <div className="navbar max-w-7xl mx-auto">
+        <div className="navbar max-w-7xl mx-auto plus-jakarta-sans">
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,8 +23,8 @@ const Navbar = () => {
                 </ul>
                 </div>
                 <div className='flex'>
-                    <img className='w-12 h-10 object-cover' src={logoImg} alt="" />
-                    <a className="btn btn-ghost font-bold text-3xl">Doc-Consult</a>
+                    <img className='hidden md:flex md:w-12 h-10 object-cover' src={logoImg} alt="" />
+                    <a className="btn btn-ghost font-bold text-xl md:text-3xl">Doc-Consult</a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -33,7 +33,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-primary rounded-3xl px-6">Emergency</a>
+                <a className="btn btn-primary rounded-3xl px-2 md:px-6">Emergency</a>
             </div>
         </div>
     );

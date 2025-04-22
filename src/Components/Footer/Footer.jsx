@@ -7,17 +7,17 @@ import { FaLinkedin } from "react-icons/fa";
 import { NavLink } from 'react-router';
 const Footer = () => {
     return (
-        <div>
+        <div className="plus-jakarta-sans">
             <footer className="footer footer-horizontal footer-center bg-base-100 text-base-content rounded p-20">
                 
                 <aside>
-                    <div className='flex items-center'>
+                    <div className='flex flex-col md:flex-row items-center gap-2'>
                         <img className='w-12 h-10 object-cover' src={logoImg} alt="" />
                         <a className="btn btn-ghost text-3xl font-bold">Doc-Consult</a>
                     </div>    
                 </aside>    
                 
-                <nav id='footer-nav' className="grid grid-flow-col gap-10 text-lg">
+                <nav id='footer-nav' className="flex flex-col md:flex-row gap-10 text-lg">
                         <NavLink to='/'>Home</NavLink>
                         <NavLink to='/myBookings'>My-Bookings</NavLink>
                         <NavLink to='/blogs'>Blogs</NavLink>

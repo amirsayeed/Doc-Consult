@@ -7,7 +7,7 @@ import Services from '../Services/Services';
 const Home = () => {
     const doctorsData = useLoaderData();
     return (
-        <div>
+        <div className='plus-jakarta-sans'>
             <Banner/>
             <Doctors doctorsData={doctorsData}/>
             <Services/>
