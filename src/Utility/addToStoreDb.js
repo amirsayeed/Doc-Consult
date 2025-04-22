@@ -16,12 +16,15 @@ export const addAppointmentToStore = (id, name) => {
     const storedAppointment = getStoredAppointment();
     if (storedAppointment.includes(id)) {
         toast.error('Appointment already scheduled for today');
-        return;
+        return false;
     } else {
         storedAppointment.push(id);
         const storedAppointmentStr = JSON.stringify(storedAppointment);
         localStorage.setItem('booking-list', storedAppointmentStr);
-        toast.success(`Appointment scheduled for ${name} successfully`);
+        setTimeout(() => {
+            toast.success(`Appointment scheduled for ${name} successfully`);
+        }, 500)
+        return true;
     }
 }
 

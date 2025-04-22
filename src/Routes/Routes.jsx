@@ -8,6 +8,7 @@ import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Bookings from '../Pages/Bookings/Bookings';
 import Blogs from '../Pages/Blogs/Blogs';
 import DoctorDetails from '../Pages/DoctorDetails/DoctorDetails';
+import Footer from '../Components/Footer/Footer';
 
 export const router = createBrowserRouter([
   {

@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from "../../assets/logo.png"
+import logoImg from "../../assets/Doc-Consult-removebg-preview.png"
 import { BsFacebook } from "react-icons/bs";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
@@ -11,9 +11,9 @@ const Footer = () => {
             <footer className="footer footer-horizontal footer-center bg-base-100 text-base-content rounded p-20">
                 
                 <aside>
-                    <div className='flex gap-1 items-center'>
-                        <img className='w-8' src={logoImg} alt="" />
-                        <a className="btn btn-ghost text-2xl">Doc-Consult</a>
+                    <div className='flex items-center'>
+                        <img className='w-12 h-10 object-cover' src={logoImg} alt="" />
+                        <a className="btn btn-ghost text-3xl font-bold">Doc-Consult</a>
                     </div>    
                 </aside>    
                 
