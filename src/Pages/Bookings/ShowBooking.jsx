@@ -1,7 +1,7 @@
 import React from 'react';
 
-const ShowBooking = ({appointment}) => {
-    const {name,education,speciality,designation,consultation_fee} = appointment;
+const ShowBooking = ({appointment,handleCancel}) => {
+    const {id,name,education,speciality,designation,consultation_fee} = appointment;
     
     return (
         <div className='w-full bg-base-100 p-8 rounded-2xl'>
@@ -18,7 +18,7 @@ const ShowBooking = ({appointment}) => {
                     <p className='font-medium text-[#0F0F0F99] text-lg'>Appointment Fee: {consultation_fee} Taka + Vat</p>
                 </div>
             </div>
-            <button className='btn rounded-3xl w-full mt-5 text-lg text-[#FF0000] border-[#FF0000]'>Cancel Appointment</button>
+            <button onClick={()=>handleCancel(id)} className='btn rounded-3xl w-full mt-5 text-lg text-[#FF0000] border-[#FF0000]'>Cancel Appointment</button>
         </div>
     );
 };

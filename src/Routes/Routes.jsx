@@ -18,6 +18,10 @@ export const router = createBrowserRouter([
         {
             index: true, 
             Component:Home,
+            hydrateFallbackElement: <span className='flex items-center justify-center'>
+              <span className="loading loading-bars loading-lg"></span>
+              <span className="loading loading-bars loading-xl"></span>
+            </span>,
             loader: () => fetch('../doctors.json')
         },
         {

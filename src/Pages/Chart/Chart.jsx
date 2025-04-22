@@ -17,7 +17,7 @@ const TriangleBar = (props) => {
 const Chart = ({booked}) => {
     // console.log(booked);
     const data = [...booked];
-    console.log(data);
+    // console.log(data);
     return (
         <div className='flex items-center justify-center'>
             <BarChart width={1000} height={400} data={data} margin={{top: 20,right: 30,left: 20,bottom: 5,}}>

@@ -15,7 +15,7 @@ export const getStoredAppointment = () => {
 export const addAppointmentToStore = (id, name) => {
     const storedAppointment = getStoredAppointment();
     if (storedAppointment.includes(id)) {
-        toast.error('Appointment is already booked!');
+        toast.error('Appointment already scheduled for today');
         return;
     } else {
         storedAppointment.push(id);
@@ -23,4 +23,10 @@ export const addAppointmentToStore = (id, name) => {
         localStorage.setItem('booking-list', storedAppointmentStr);
         toast.success(`Appointment scheduled for ${name} successfully`);
     }
+}
+
+export const removeFromStore = (bookedId) => {
+    const storedAppointment = getStoredAppointment();
+    const remainingAppointment = storedAppointment.filter(booking => booking !== bookedId)
+    localStorage.setItem('booking-list', JSON.stringify(remainingAppointment));
 }

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
-import { getStoredAppointment } from '../../Utility/addtoStoredb';
+import { getStoredAppointment, removeFromStore } from '../../Utility/addtoStoredb';
 import ShowBooking from './ShowBooking';
 import Chart from '../Chart/Chart';
 import NoBookings from './NoBookings';
+import { ToastContainer,toast} from 'react-toastify';
 
 const Bookings = () => {
     const [booked, setBooked] = useState([]);
     const allData = useLoaderData();
-    
+
     useEffect(()=>{
         const getBooked = getStoredAppointment();
         const getBookedInt = getBooked.map(id => parseInt(id));
@@ -17,8 +18,18 @@ const Bookings = () => {
         setBooked(bookedAppointment);
     },[])
 
+    const handleCancel = id =>{
+        removeFromStore(id);
+        const currentlyBooked = getStoredAppointment();
+        const currentlyBookedInt = currentlyBooked.map(appointId=>parseInt(appointId));
+        const remainingBooked = allData.filter(remaining => currentlyBookedInt.includes(remaining.id));
+        setBooked(remainingBooked);
+        toast.error('Appointment Cancelled');
+    }
+
     return (
         <div>
+            <ToastContainer/>
             {booked.length===0 ? 
             <NoBookings/> : 
             (<div className='bg-base-100 rounded-2xl p-6'>
@@ -32,7 +43,7 @@ const Bookings = () => {
 
                 <div className='flex flex-col gap-6 items-center justify-center mt-8'>
                     {
-                        booked.map((appointment,idx)=> <ShowBooking key={idx} appointment={appointment}/> )
+                        booked.map((appointment,idx)=> <ShowBooking key={idx} appointment={appointment} handleCancel={handleCancel}/> )
                     }
                 </div>
             </div>
