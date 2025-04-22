@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImg from "../../assets/logo.png"
+import logoImg from "../../assets/Doc-Consult-removebg-preview.png"
 import { NavLink } from 'react-router';
 import './Navbar.css'
 const Navbar = () => {
@@ -22,9 +22,9 @@ const Navbar = () => {
                     {links}
                 </ul>
                 </div>
-                <div className='flex gap-1 items-start'>
-                    <img src={logoImg} alt="" />
-                    <a className="btn btn-ghost text-3xl">Doc-Consult</a>
+                <div className='flex'>
+                    <img className='w-12 h-10 object-cover' src={logoImg} alt="" />
+                    <a className="btn btn-ghost font-bold text-3xl">Doc-Consult</a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

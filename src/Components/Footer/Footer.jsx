@@ -4,7 +4,7 @@ import { BsFacebook } from "react-icons/bs";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
-import { Link, NavLink } from 'react-router';
+import { NavLink } from 'react-router';
 const Footer = () => {
     return (
         <div>
@@ -25,18 +25,18 @@ const Footer = () => {
                 </nav>
                 <nav>
                     <div className="grid grid-flow-col gap-6">
-                    <Link to='https://www.facebook.com/'>
-                        <BsFacebook size={25} color='blue'/>
-                    </Link>
-                    <Link to='https://x.com/'>
-                        <FaSquareXTwitter size={25} color='black'/>
-                    </Link>
-                    <Link to='https://www.linkedin.com/'>
-                        <FaLinkedin size={25} color='blue'/>
-                    </Link>
-                    <Link to='https://www.youtube.com/'>
-                        <FaYoutube size={25} color='red'/>
-                    </Link>
+                        <a href="https://www.facebook.com/" target="_blank">
+                        <BsFacebook size={25} color="blue" />
+                        </a>
+                        <a href="https://x.com/" target="_blank">
+                        <FaSquareXTwitter size={25} color="black" />
+                        </a>
+                        <a href="https://www.linkedin.com/" target="_blank">
+                        <FaLinkedin size={25} color="blue" />
+                        </a>
+                        <a href="https://www.youtube.com/" target="_blank">
+                        <FaYoutube size={25} color="red" />
+                        </a>
                     </div>
                 </nav>
             </footer>

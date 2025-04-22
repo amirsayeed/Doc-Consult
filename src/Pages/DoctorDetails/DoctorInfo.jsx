@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiRegistered } from "react-icons/bi";
 const DoctorInfo = ({docInfo}) => {
-    const {image,name,education,working_place,consultation_fee,availability,registration_number} = docInfo; 
+    const {image,name,education,designation,working_place,consultation_fee,availability,registration_number} = docInfo; 
 
     return (
         <div className='flex gap-6 my-8 bg-base-100 p-12 rounded-2xl'>
@@ -10,7 +10,8 @@ const DoctorInfo = ({docInfo}) => {
             </div>
             <div className='space-y-3 flex-1'>
                 <h2 className="text-3xl font-bold">{name}</h2>
-                <p className='text-[#0F0F0F99] text-lg font-medium'>{education}</p>
+                <p className='text-[#0F0F0F99] text-lg font-medium'>{education}<br/>
+                {designation}</p>
                 <p className='text-[#0F0F0F80] text-lg font-medium'>Working at<br/>
                     <span className='text-[#0F0F0F] font-bold'>{working_place}</span>
                 </p>

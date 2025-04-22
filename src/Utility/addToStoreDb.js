@@ -21,6 +21,6 @@ export const addAppointmentToStore = (id, name) => {
         storedAppointment.push(id);
         const storedAppointmentStr = JSON.stringify(storedAppointment);
         localStorage.setItem('booking-list', storedAppointmentStr);
-        toast.success(`Your appointment with ${name} is booked!`);
+        toast.success(`Appointment scheduled for ${name} successfully`);
     }
 }
