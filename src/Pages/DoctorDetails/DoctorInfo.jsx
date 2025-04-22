@@ -1,7 +1,7 @@
 import React from 'react';
 import { BiRegistered } from "react-icons/bi";
 const DoctorInfo = ({docInfo}) => {
-    const {image,name,education,designation,working_place,consultation_fee,availability,registration_number} = docInfo; 
+    const {image,name,education,designation,working_place,consultation_fee,availability,registration_number} = docInfo || {}; 
 
     return (
         <div className='flex gap-6 my-8 bg-base-100 p-12 rounded-2xl'>

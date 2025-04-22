@@ -1,19 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { addAppointmentToStore } from '../../Utility/addtoStoredb';
 import { TbAlertSquareRounded } from "react-icons/tb";
 import { useNavigate } from "react-router";
 
 const BookAppointment = ({docInfo}) => {
-    const [bookedStatus, setBookedStatus] = useState(false);
+    
     const navigate = useNavigate();
     const handleBook = (id,name) =>{
         const isBooked = addAppointmentToStore(id,name);
 
         if(isBooked){
-            setBookedStatus(true);
+            navigate('/myBookings');
             window.scroll(0,0);
-        }else{
-            setBookedStatus(false);
         }
     }
 
@@ -33,10 +31,7 @@ const BookAppointment = ({docInfo}) => {
                 <p className='text-[#FFA000]'>Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</p>
             </div>
             <button onClick={()=>handleBook(docInfo.id, docInfo.name)} className='btn bg-[#176AE5] text-[#fff] text-lg font-medium w-full rounded-3xl mt-4'>Book Appointment Now</button>
-            {
-                bookedStatus && navigate('/myBookings')
-            }
-                
+            
         </div>
     );
 };

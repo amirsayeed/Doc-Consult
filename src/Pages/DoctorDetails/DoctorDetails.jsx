@@ -15,8 +15,8 @@ const DoctorDetails = () => {
         <div>
             <div className='bg-base-100 rounded-2xl p-12'>
                 <div className='max-w-4xl mx-auto text-center space-y-4'>
-                    <h2 className="text-3xl font-semibold">Doctor’s Profile Details</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur. Sit enim blandit orci tortor amet ut. Suscipit sed est fermentum magna. Quis vitae tempus facilisis turpis imperdiet mattis donec dignissim volutpat.</p>
+                    <h2 className="text-3xl font-bold">Doctor’s Profile Details</h2>
+                    <p className='font-medium text-lg'>Discover reputable physicians, their specialties, and the care they provide in one location—your health is our first priority.</p>
                 </div>
             </div>
             <ToastContainer />

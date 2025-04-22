@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import {
   createBrowserRouter
 } from "react-router";
@@ -8,7 +8,12 @@ import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Bookings from '../Pages/Bookings/Bookings';
 import Blogs from '../Pages/Blogs/Blogs';
 import DoctorDetails from '../Pages/DoctorDetails/DoctorDetails';
-import Footer from '../Components/Footer/Footer';
+import DoctorErrorPage from '../Pages/DoctorDetails/DoctorErrorPage';
+
+const loadingBars = <span className='flex items-center justify-center'>
+                      <span className="loading loading-bars loading-lg"></span>
+                      <span className="loading loading-bars loading-xl"></span>
+                    </span>
 
 export const router = createBrowserRouter([
   {
@@ -17,23 +22,23 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children:[
         {
-            index: true, 
-            Component:Home,
-            hydrateFallbackElement: <span className='flex items-center justify-center'>
-              <span className="loading loading-bars loading-lg"></span>
-              <span className="loading loading-bars loading-xl"></span>
-            </span>,
-            loader: () => fetch('../doctors.json')
+          index: true, 
+          Component:Home,
+          hydrateFallbackElement: loadingBars,
+          loader: () => fetch('../doctors.json')
         },
         {
           path: '/doctors/:docId',
           loader: ()=> fetch('../doctors.json'),
-          Component: DoctorDetails
+          Component: DoctorDetails,
+          hydrateFallbackElement: loadingBars,
+          errorElement: <DoctorErrorPage/>
         },
         {
           path: 'myBookings',
           Component: Bookings,
-          loader: () => fetch('../doctors.json')
+          loader: () => fetch('../doctors.json'),
+          hydrateFallbackElement: loadingBars
         },
         {
           path: 'blogs',
@@ -41,8 +46,12 @@ export const router = createBrowserRouter([
         },
         {
           path: 'contact',
-          Component: ErrorPage
+          Component: ErrorPage,
         }
     ]
   },
+  {
+    path: '*',
+    Component: ErrorPage
+  }
 ]);
