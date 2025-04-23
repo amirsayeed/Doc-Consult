@@ -12,11 +12,11 @@ const DoctorDetails = () => {
     const docInfo = allDoctors.find(info => info.id === docIdInt)
 
     return (
-        <div>
+        <div className='plus-jakarta-sans'>
             <div className='bg-base-100 rounded-2xl p-12'>
                 <div className='max-w-4xl mx-auto text-center space-y-4'>
-                    <h2 className="text-3xl font-bold">Doctor’s Profile Details</h2>
-                    <p className='font-medium text-lg'>Discover reputable physicians, their specialties, and the care they provide in one location—your health is our first priority.</p>
+                    <h2 className="text-3xl font-bold text-[#141414]">Doctor’s Profile Details</h2>
+                    <p className='font-medium text-lg text-[#141414B3]'>Discover reputable physicians, their specialties, and the care they provide in one location—your health is our first priority.</p>
                 </div>
             </div>
             <ToastContainer />

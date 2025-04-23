@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import {
   createBrowserRouter
 } from "react-router";
@@ -9,17 +9,23 @@ import Bookings from '../Pages/Bookings/Bookings';
 import Blogs from '../Pages/Blogs/Blogs';
 import DoctorDetails from '../Pages/DoctorDetails/DoctorDetails';
 import DoctorErrorPage from '../Pages/DoctorDetails/DoctorErrorPage';
+import Navbar from '../Components/Navbar/Navbar';
 
 const loadingBars = <span className='flex items-center justify-center'>
                       <span className="loading loading-bars loading-lg"></span>
                       <span className="loading loading-bars loading-xl"></span>
                     </span>
 
+const errorPage = <div className='bg-gray-200'>
+                    <Navbar/>
+                    <ErrorPage/>
+                  </div>
+
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    errorElement: <ErrorPage/>,
+    errorElement: errorPage,
     children:[
         {
           index: true, 
@@ -45,15 +51,7 @@ export const router = createBrowserRouter([
           Component: Blogs,
           loader: () => fetch('../blogs.json'),
           hydrateFallbackElement: loadingBars
-        },
-        {
-          path: 'contact',
-          Component: ErrorPage,
         }
     ]
   },
-  {
-    path: '*',
-    Component: ErrorPage
-  }
 ]);

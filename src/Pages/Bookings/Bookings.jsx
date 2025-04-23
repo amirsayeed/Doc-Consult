@@ -28,7 +28,7 @@ const Bookings = () => {
     }
 
     return (
-        <div>
+        <div className='plus-jakarta-sans'>
             <ToastContainer/>
             {booked.length===0 ? 
             <NoBookings/> : 
@@ -38,7 +38,7 @@ const Bookings = () => {
             {
              booked.length > 0 && 
             <div className='my-20 text-center space-y-3'>
-                <h2 className="text-3xl font-bold">My Today Appointments</h2>
+                <h2 className="text-3xl font-bold text-[#0F0F0F]">My Today Appointments</h2>
                 <p className='text-[#0F0F0F]'>Our platform connects you with verified, experienced doctors across various specialties — all at your convenience.</p>
 
                 <div className='flex flex-col gap-6 items-center justify-center mt-8'>

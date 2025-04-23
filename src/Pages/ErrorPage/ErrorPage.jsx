@@ -6,7 +6,7 @@ const ErrorPage = () => {
         <div className='flex flex-col items-center justify-center gap-5 min-h-screen px-1 md:px-0'>
             <img className='w-full md:w-[350px] h-[250px] rounded-2xl object-cover' src={errorImg} alt="" />
             <h3 className="text-3xl md:text-4xl text-center font-bold text-red-500">404 - Page Not Found</h3>
-            <p>Oops! The page you're looking for doesn't exist!</p>
+            <p className='font-medium'>Oops! The page you're looking for doesn't exist!</p>
             <Link to='/'>
                 <button className='btn btn-primary rounded-xl'>Go Back Home</button>
             </Link>

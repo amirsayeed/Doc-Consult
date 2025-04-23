@@ -24,16 +24,16 @@ const Navbar = () => {
                 </div>
                 <div className='flex'>
                     <img className='hidden md:flex md:w-12 h-10 object-cover' src={logoImg} alt="" />
-                    <a className="btn btn-ghost font-bold text-xl md:text-3xl">Doc-Consult</a>
+                    <a className="btn btn-ghost font-bold text-xl md:text-3xl text-[#0F0F0F]">Doc-Consult</a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 text-lg">
+                <ul className="menu menu-horizontal px-1 text-lg text-[#0F0F0FB3] font-medium">
                     {links}
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-primary rounded-3xl px-2 md:px-6">Emergency</a>
+                <a className="btn bg-[#176AE5] text-[#fff] rounded-3xl px-2 md:px-6">Emergency</a>
             </div>
         </div>
     );

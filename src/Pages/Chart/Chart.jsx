@@ -15,11 +15,11 @@ const TriangleBar = (props) => {
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 const Chart = ({booked}) => {
-    // console.log(booked);
+
     const data = [...booked];
-    // console.log(data);
+
     return (
-        <div className='flex items-center justify-center'>
+        <div className='flex items-center justify-center text-[#14141499] font-medium'>
             <BarChart width={1000} height={400} data={data} margin={{top: 20,right: 30,left: 20,bottom: 5,}}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />

@@ -8,9 +8,9 @@ const Blogs = () => {
 
     return (
         <div>
-            <div className='max-w-4xl text-center space-y-3'>
+            <div className='text-center space-y-3 plus-jakarta-sans text-[#0F0F0F]'>
                 <h2 className="text-4xl font-bold">Blogs</h2>
-                <p>Let's explore some basic concepts that will make you a good developer</p>
+                <p className='font-medium'>Let's explore some basic concepts that will make you a good developer</p>
             </div>
             <div className='flex flex-col gap-5 mt-10 px-1'>
                 {

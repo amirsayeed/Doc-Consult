@@ -9,7 +9,7 @@ const DoctorInfo = ({docInfo}) => {
                 <img className='rounded-3xl' src={image} alt=''/>
             </div>
             <div className='space-y-3 flex-1'>
-                <h2 className="text-3xl font-bold">{name}</h2>
+                <h2 className="text-3xl font-bold text-[#0F0F0F]">{name}</h2>
                 <p className='text-[#0F0F0F99] text-lg font-medium'>{education}<br/>
                 {designation}</p>
                 <p className='text-[#0F0F0F80] text-lg font-medium'>Working at<br/>
@@ -22,7 +22,7 @@ const DoctorInfo = ({docInfo}) => {
                     </div>
                 <div className='border-t border-dashed my-2'></div>
                     <div className='flex gap-3 items-center'>
-                        <p className='font-semibold'>Availability</p>
+                        <p className='font-bold text-[#0F0F0F]'>Availability</p>
                         <div className='flex flex-wrap gap-3'>
                             {
                                 availability.map((day,idx)=><div key={idx} className='bg-[#FFA0001A] p-2 rounded-2xl'>
@@ -31,7 +31,10 @@ const DoctorInfo = ({docInfo}) => {
                             }
                         </div>
                     </div>
-                <p className='font-semibold'>Consultation Fee: <span className='text-[#176AE5]'>Taka {consultation_fee}</span> (incl. Vat) <span className='text-[#176AE5]'>Per consultation</span></p>
+                <p className='manrope font-bold text-[#141414]'>Consultation Fee: 
+                    <span className='text-[#176AE5]'>Taka {consultation_fee} </span> 
+                    <span className='text-[#14141480]'>(incl. Vat) </span> 
+                    <span className='text-[#176AE5]'>Per consultation</span></p>
             </div>
         </div>
     );

@@ -13,11 +13,11 @@ const Footer = () => {
                 <aside>
                     <div className='flex flex-col md:flex-row items-center gap-2'>
                         <img className='w-12 h-10 object-cover' src={logoImg} alt="" />
-                        <a className="btn btn-ghost text-3xl font-bold">Doc-Consult</a>
+                        <a className="btn btn-ghost text-3xl font-bold text-[#0F0F0F]">Doc-Consult</a>
                     </div>    
                 </aside>    
                 
-                <nav id='footer-nav' className="flex flex-col md:flex-row gap-10 text-lg">
+                <nav id='footer-nav' className="flex flex-col md:flex-row gap-10 text-lg text-[#0F0F0FB3] font-medium">
                         <NavLink to='/'>Home</NavLink>
                         <NavLink to='/myBookings'>My-Bookings</NavLink>
                         <NavLink to='/blogs'>Blogs</NavLink>
