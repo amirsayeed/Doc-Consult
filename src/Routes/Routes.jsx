@@ -8,7 +8,6 @@ import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import Bookings from '../Pages/Bookings/Bookings';
 import Blogs from '../Pages/Blogs/Blogs';
 import DoctorDetails from '../Pages/DoctorDetails/DoctorDetails';
-import DoctorErrorPage from '../Pages/DoctorDetails/DoctorErrorPage';
 import Navbar from '../Components/Navbar/Navbar';
 
 const loadingBars = <span className='flex items-center justify-center'>
@@ -37,8 +36,7 @@ export const router = createBrowserRouter([
           path: '/doctors/:docId',
           loader: ()=> fetch('../doctors.json'),
           Component: DoctorDetails,
-          hydrateFallbackElement: loadingBars,
-          errorElement: <DoctorErrorPage/>
+          hydrateFallbackElement: loadingBars
         },
         {
           path: 'myBookings',

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid } from 'recharts';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid} from 'recharts';
 const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
 const getPath = (x, y, width, height) => {
@@ -24,6 +24,7 @@ const Chart = ({booked}) => {
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
+            
             <Bar dataKey="consultation_fee" fill="#8884d8" shape={<TriangleBar />} 
             label={{ position: 'top' }}>
                 {data.map((entry, index) => (

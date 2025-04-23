@@ -3,6 +3,7 @@ import { useLoaderData, useParams } from 'react-router';
 import DoctorInfo from './DoctorInfo';
 import BookAppointment from './BookAppointment';
 import { ToastContainer} from 'react-toastify';
+import DoctorErrorPage from './DoctorErrorPage';
 const DoctorDetails = () => {
     const allDoctors = useLoaderData();
     // console.log(allDoctors);
@@ -10,8 +11,10 @@ const DoctorDetails = () => {
     // console.log(docId)
     const docIdInt = parseInt(docId);
     const docInfo = allDoctors.find(info => info.id === docIdInt)
-
+    
     return (
+        <>
+        { docInfo &&
         <div className='plus-jakarta-sans'>
             <div className='bg-base-100 rounded-2xl p-12'>
                 <div className='max-w-4xl mx-auto text-center space-y-4'>
@@ -22,7 +25,9 @@ const DoctorDetails = () => {
             <ToastContainer />
             <DoctorInfo docInfo={docInfo}/>
             <BookAppointment docInfo={docInfo}/>
-        </div>
+        </div>}
+        {!docInfo && <DoctorErrorPage/>}
+        </>
     );
 };
 
