@@ -14,10 +14,10 @@ const Banner = () => {
                     <input type="submit" value="Search" className='btn btn-primary ml-2 rounded-3xl md:px-6 lg:px-10'/>
                 </form>
                 <div className='flex flex-col md:flex-row items-center justify-center gap-5'>
-                    <div className='md:w-1/2'>
+                    <div className='w-full md:w-1/2'>
                         <img className='rounded-xl' src={bannerImg} alt="" />
                     </div>
-                    <div className='md:w-1/2'>
+                    <div className='w-full md:w-1/2'>
                         <img className='rounded-xl' src={bannerImg} alt="" />
                     </div>
                 </div>

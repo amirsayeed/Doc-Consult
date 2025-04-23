@@ -42,7 +42,9 @@ export const router = createBrowserRouter([
         },
         {
           path: 'blogs',
-          Component: Blogs
+          Component: Blogs,
+          loader: () => fetch('../blogs.json'),
+          hydrateFallbackElement: loadingBars
         },
         {
           path: 'contact',
