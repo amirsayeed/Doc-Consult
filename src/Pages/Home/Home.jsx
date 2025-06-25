@@ -21,7 +21,6 @@ const Home = () => {
         setIsSearch(true);
         if(searchTxt === '') {
             setIsSearch(false);
-            return doctorsData
         };
     }
 

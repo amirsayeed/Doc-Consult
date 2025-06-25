@@ -11,6 +11,17 @@ Check out the live version of the app here:
 
 ---
 
+## 🚀 Technologies Used
+
+- **React 19** – Frontend library
+- **React Router DOM** – Routing
+- **Tailwind CSS** – Styling
+- **DaisyUI** – Tailwind-based component library
+- **Vite** – Development & build tool
+- **Recharts** – Data visualization
+
+---
+
 ## ✨ Features
 
 ### 📌 Universal Layout
@@ -62,17 +73,6 @@ Educational answers to key React questions:
 
 ---
 
-## ⚙️ Under the Hood
-
-- 🔁 **Routing** with `react-router-dom`
-- 🎨 **Styling** via Tailwind CSS
-- 📊 **Data Viz** with `recharts`
-- 💾 **State Persistence** using `localStorage`
-- ⚡ **Fast Dev Experience** via Vite
-- 📈 **Animations** with `react-countup`
-
----
-
 ## 🚦 User Experience Enhancements
 
 - **Loading Animation** shown during route transitions
@@ -81,3 +81,39 @@ Educational answers to key React questions:
 - **Robust Reloading**: App remains stable on manual refreshes or deep links
 
 ---
+
+## 📦 Dependencies
+
+- react
+- react-router-dom
+- tailwindcss
+- vite
+- recharts – charting library
+- react-countup – animated number counters
+- react-icons – icon library
+- react-toastify – toast notifications
+
+---
+
+## 🛠️ Local Development Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/amirsayeed/Doc-Consult.git
+```
+
+### 2. Install Dependencies
+
+```bash
+cd Doc-Consult-App
+npm install
+```
+
+### 3. Start the Development Server
+
+```bash
+npm run dev
+```
+
+The app will run at: http://localhost:5173
